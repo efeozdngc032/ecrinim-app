@@ -1,0 +1,23 @@
+const colors = [
+  ["#ff9a9e", "#fad0c4"],
+  ["#a1c4fd", "#c2e9fb"],
+  ["#fbc2eb", "#a6c1ee"],
+  ["#ffecd2", "#fcb69f"],
+  ["#d4fc79", "#96e6a1"]
+];
+
+const texts = [
+  "Seni Çok Seviyorum Ecrinim 💖",
+  "Kalbim hep seninle 💞",
+  "Gülüşün dünyama renk katıyor 🌈",
+  "Sen bir tanesin Ecrinim 💕",
+  "Hep sen, her zaman sen 💘"
+];
+
+function changeStyle() {
+  const random = Math.floor(Math.random() * colors.length);
+  document.body.style.background = `linear-gradient(135deg, ${colors[random][0]}, ${colors[random][1]})`;
+
+  const text = document.getElementById("love-text");
+  text.innerText = texts[Math.floor(Math.random() * texts.length)];
+}
